@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		228E045027B3F6ED00CF6CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E044F27B3F6ED00CF6CBC /* AppDelegate.swift */; };
 		228E045227B3F6ED00CF6CBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E045127B3F6ED00CF6CBC /* SceneDelegate.swift */; };
-		228E045427B3F6ED00CF6CBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E045327B3F6ED00CF6CBC /* ViewController.swift */; };
+		228E045427B3F6ED00CF6CBC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E045327B3F6ED00CF6CBC /* MenuViewController.swift */; };
 		228E045727B3F6ED00CF6CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E045527B3F6ED00CF6CBC /* Main.storyboard */; };
 		228E045927B3F6F000CF6CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228E045827B3F6F000CF6CBC /* Assets.xcassets */; };
 		228E045C27B3F6F000CF6CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E045A27B3F6F000CF6CBC /* LaunchScreen.storyboard */; };
 		228E046727B3F6F000CF6CBC /* iOSNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E046627B3F6F000CF6CBC /* iOSNotesTests.swift */; };
 		228E047127B3F6F000CF6CBC /* iOSNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E047027B3F6F000CF6CBC /* iOSNotesUITests.swift */; };
 		228E047327B3F6F000CF6CBC /* iOSNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E047227B3F6F000CF6CBC /* iOSNotesUITestsLaunchTests.swift */; };
+		228E048327B3F75100CF6CBC /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E048227B3F75100CF6CBC /* Consts.swift */; };
+		228E048727B3FC6E00CF6CBC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E048627B3FC6E00CF6CBC /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		228E044C27B3F6ED00CF6CBC /* iOSNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228E044F27B3F6ED00CF6CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228E045127B3F6ED00CF6CBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		228E045327B3F6ED00CF6CBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		228E045327B3F6ED00CF6CBC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		228E045627B3F6ED00CF6CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		228E045827B3F6F000CF6CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		228E045B27B3F6F000CF6CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		228E046C27B3F6F000CF6CBC /* iOSNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		228E047027B3F6F000CF6CBC /* iOSNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSNotesUITests.swift; sourceTree = "<group>"; };
 		228E047227B3F6F000CF6CBC /* iOSNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		228E048227B3F75100CF6CBC /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		228E048627B3FC6E00CF6CBC /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,12 @@
 		228E044E27B3F6ED00CF6CBC /* iOSNotes */ = {
 			isa = PBXGroup;
 			children = (
+				228E048127B3F73B00CF6CBC /* Models */,
+				228E048027B3F72D00CF6CBC /* Controllers */,
+				228E047F27B3F6FB00CF6CBC /* Views */,
 				228E044F27B3F6ED00CF6CBC /* AppDelegate.swift */,
 				228E045127B3F6ED00CF6CBC /* SceneDelegate.swift */,
-				228E045327B3F6ED00CF6CBC /* ViewController.swift */,
-				228E045527B3F6ED00CF6CBC /* Main.storyboard */,
 				228E045827B3F6F000CF6CBC /* Assets.xcassets */,
-				228E045A27B3F6F000CF6CBC /* LaunchScreen.storyboard */,
 				228E045D27B3F6F000CF6CBC /* Info.plist */,
 			);
 			path = iOSNotes;
@@ -125,6 +129,32 @@
 				228E047227B3F6F000CF6CBC /* iOSNotesUITestsLaunchTests.swift */,
 			);
 			path = iOSNotesUITests;
+			sourceTree = "<group>";
+		};
+		228E047F27B3F6FB00CF6CBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				228E045527B3F6ED00CF6CBC /* Main.storyboard */,
+				228E045A27B3F6F000CF6CBC /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		228E048027B3F72D00CF6CBC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				228E045327B3F6ED00CF6CBC /* MenuViewController.swift */,
+				228E048627B3FC6E00CF6CBC /* NoteViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		228E048127B3F73B00CF6CBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				228E048227B3F75100CF6CBC /* Consts.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228E045427B3F6ED00CF6CBC /* ViewController.swift in Sources */,
+				228E045427B3F6ED00CF6CBC /* MenuViewController.swift in Sources */,
+				228E048327B3F75100CF6CBC /* Consts.swift in Sources */,
 				228E045027B3F6ED00CF6CBC /* AppDelegate.swift in Sources */,
+				228E048727B3FC6E00CF6CBC /* NoteViewController.swift in Sources */,
 				228E045227B3F6ED00CF6CBC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
