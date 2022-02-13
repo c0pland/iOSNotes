@@ -26,8 +26,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         vc.title = "Note"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = {noteTitle, noteBody in
-            print("Gotcha")
+        vc.completion = {noteTitle, noteBody in //save new note
             self.navigationController?.popToRootViewController(animated: true)
             self.models.append((noteTitle, noteBody))
             self.table.reloadData()
@@ -53,8 +52,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc.currentTitle = models[indexPath.row].noteTitle //set the title
         vc.currentBody = models[indexPath.row].noteBody //set the body
         self.models.remove(at: indexPath.row)
-        vc.completion = {noteTitle, noteBody in
-            print("Gotcha")
+        vc.completion = {noteTitle, noteBody in //save existing note
             self.navigationController?.popToRootViewController(animated: true)
             self.models.append((noteTitle, noteBody))
             self.table.reloadData()

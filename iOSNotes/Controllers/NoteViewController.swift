@@ -19,17 +19,15 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Note Did load")
-        titleField.text = currentTitle
-        noteField.text = currentBody
-        titleField.becomeFirstResponder()
-        print("strt")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(savePressed))
-        print("finish")
+        self.navigationItem.setHidesBackButton(true, animated: true) //hide the back button, so that the note is always saved
+        titleField.text = currentTitle //set the title and the body for the existing note
+        noteField.text = currentBody // if the note has just been created, it will be empty
+        titleField.becomeFirstResponder() //toggle keyboard to the title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(savePressed)) //save button
     }
     @objc func savePressed() {
-        if let title = titleField.text, !title.isEmpty, !noteField.text.isEmpty {
-            completion?(title, noteField.text)
+        if let title = titleField.text, !title.isEmpty, !noteField.text.isEmpty { // note MUST have the title and the body
+            completion?(title, noteField.text) // toggle root VC and save the note
         }
     }
 }
