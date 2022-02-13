@@ -15,15 +15,17 @@ class NoteViewController: UIViewController {
     
     public var currentTitle = ""
     public var currentBody = ""
-    public var isNew = true
     public var completion: ((String, String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Note Did load")
         titleField.text = currentTitle
         noteField.text = currentBody
         titleField.becomeFirstResponder()
+        print("strt")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(savePressed))
+        print("finish")
     }
     @objc func savePressed() {
         if let title = titleField.text, !title.isEmpty, !noteField.text.isEmpty {

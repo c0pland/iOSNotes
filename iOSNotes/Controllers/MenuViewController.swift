@@ -10,7 +10,7 @@ import UIKit
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var table: UITableView!
     @IBOutlet weak var label: UILabel!
-    
+    var currentIndex = 0
     var models: [(noteTitle: String, noteBody: String)] = [("Title", "Note")]
 
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc.title = "Note"
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.completion = {noteTitle, noteBody in
+            print("Gotcha")
             self.navigationController?.popToRootViewController(animated: true)
             self.models.append((noteTitle, noteBody))
             self.table.reloadData()
@@ -49,9 +50,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Note"
-        print("IndexPathRow is \(indexPath.row)")
         vc.currentTitle = models[indexPath.row].noteTitle //set the title
         vc.currentBody = models[indexPath.row].noteBody //set the body
+        self.models.remove(at: indexPath.row)
+        vc.completion = {noteTitle, noteBody in
+            print("Gotcha")
+            self.navigationController?.popToRootViewController(animated: true)
+            self.models.append((noteTitle, noteBody))
+            self.table.reloadData()
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
 }
